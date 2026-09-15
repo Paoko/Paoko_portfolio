@@ -1,0 +1,110 @@
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: grab;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.gallery:active {
+  cursor: grabbing;
+}
+
+.board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.gallery-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  cursor: grab;
+  -webkit-user-drag: none;
+  will-change: transform;
+}
+
+.gallery-item.wide {
+  width: 460px;
+}
+
+.gallery-item:active {
+  cursor: grabbing;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 200px;
+  }
+
+  .gallery-item.wide {
+    width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 160px;
+  }
+
+  .gallery-item.wide {
+    width: 260px;
+  }
+}
+
+.zoom-control {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.zoom-control .zoom-icon {
+  color: #fff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  user-select: none;
+}
+
+.zoom-control input[type='range'] {
+  width: 140px;
+  accent-color: #fff;
+  cursor: pointer;
+}
