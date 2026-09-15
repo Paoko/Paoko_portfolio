@@ -24,10 +24,6 @@
   font-family: Georgia, 'Times New Roman', serif;
 }
 
-.about-text .t-red {
-  color: #ff4d3d;
-}
-
 .about-text .t-mono {
   font-family: ui-monospace, Consolas, monospace;
   font-size: 14px;
