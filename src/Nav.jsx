@@ -4,6 +4,7 @@ import './Nav.css';
 const LINKS = [
   { key: 'gallery', label: 'Galería' },
   { key: 'about', label: 'Sobre mi' },
+  { key: 'video', label: 'Video' },
   { key: 'shop', label: 'Tienda' },
 ];
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import GalleryPortfolio from './GalleryPortfolio'
 import AboutMe from './AboutMe'
+import ScrollVideo from './ScrollVideo'
 import Nav from './Nav'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Nav active={view} onNavigate={setView} hoverEffect={view === 'gallery'} />
       {view === 'gallery' && <GalleryPortfolio />}
       {view === 'about' && <AboutMe />}
+      {view === 'video' && <ScrollVideo />}
       {view === 'shop' && (
         <div style={{
           minHeight: '100vh',
